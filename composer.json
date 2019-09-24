@@ -1,12 +1,12 @@
 {
     "license": "MIT",
+    "version": "1.0.2",
     "name": "samius/address",
     "description": "Data holder classes for address",
     "require": {
         "php": ">=7.1",
         "doctrine/dbal": "^2.5"
     },
-    "version": "1.0.1",
     "minimum-stability" : "stable",
     "autoload": {
         "psr-0": {

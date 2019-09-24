@@ -3,9 +3,10 @@
 namespace Samius\Address\Doctrine\DBAL\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\JsonType;
 use Samius\Address;
 
-class AddressType extends Doctrine\DBAL\Types\JsonType
+class AddressType extends JsonType
 {
     public function getName()
     {

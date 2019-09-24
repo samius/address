@@ -1,0 +1,15 @@
+{
+    "license": "MIT",
+    "name": "samius/address",
+    "description": "Data holder classes for address",
+    "require": {
+        "php": ">=7.1"
+    },
+    "version": "1.0",
+    "minimum-stability" : "stable",
+    "autoload": {
+        "psr-0": {
+            "Samius": "src/"
+        }
+    }
+}

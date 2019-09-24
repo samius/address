@@ -3,7 +3,6 @@
 namespace Samius\Address\Doctrine\DBAL\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
 use Samius\Address;
 
 class CompanyType extends Doctrine\DBAL\Types\JsonType
@@ -16,7 +15,7 @@ class CompanyType extends Doctrine\DBAL\Types\JsonType
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
         $values = parent::convertToPHPValue($value, $platform);
-        return new Address\Company($values['crn'], $values['vatin']);
+        return new Address\Company($values['name'], $values['crn'], $values['vatin']);
     }
 
     /**

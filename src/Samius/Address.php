@@ -35,7 +35,7 @@ class Address
      * @param string $zip
      * @param string $country
      */
-    public function __construct(string $street, string $city, string $zip, string $country)
+    public function __construct(string $street = '', string $city = '', string $zip = '', string $country = '')
     {
         $this->street = $street;
         $this->city = $city;
@@ -86,5 +86,45 @@ class Address
     public function getCountry(): string
     {
         return $this->country;
+    }
+
+    /**
+     * @param string $street
+     * @return Address
+     */
+    public function setStreet(string $street): Address
+    {
+        $this->street = $street;
+        return $this;
+    }
+
+    /**
+     * @param string $city
+     * @return Address
+     */
+    public function setCity(string $city): Address
+    {
+        $this->city = $city;
+        return $this;
+    }
+
+    /**
+     * @param string $zip
+     * @return Address
+     */
+    public function setZip(string $zip): Address
+    {
+        $this->zip = $zip;
+        return $this;
+    }
+
+    /**
+     * @param string $country
+     * @return Address
+     */
+    public function setCountry(string $country): Address
+    {
+        $this->country = $country;
+        return $this;
     }
 }

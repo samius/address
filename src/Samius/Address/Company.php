@@ -29,7 +29,7 @@ class Company
      * @param string $crn
      * @param string $vatin
      */
-    public function __construct(string $name, string $crn, string $vatin)
+    public function __construct(string $name = '', string $crn = '', string $vatin = '')
     {
         $this->name = $name;
         $this->crn = $crn;
@@ -72,5 +72,33 @@ class Company
         ];
     }
 
+    /**
+     * @param string $name
+     * @return Company
+     */
+    public function setName(string $name): Company
+    {
+        $this->name = $name;
+        return $this;
+    }
 
+    /**
+     * @param string $crn
+     * @return Company
+     */
+    public function setCrn(string $crn): Company
+    {
+        $this->crn = $crn;
+        return $this;
+    }
+
+    /**
+     * @param string $vatin
+     * @return Company
+     */
+    public function setVatin(string $vatin): Company
+    {
+        $this->vatin = $vatin;
+        return $this;
+    }
 }

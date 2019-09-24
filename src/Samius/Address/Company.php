@@ -6,6 +6,11 @@ namespace Samius\Address;
 class Company
 {
     /**
+     * @var string
+     */
+    private $name;
+
+    /**
      * Company registration number
      * @var string
      */
@@ -24,10 +29,19 @@ class Company
      * @param string $crn
      * @param string $vatin
      */
-    public function __construct(string $crn, string $vatin)
+    public function __construct(string $name, string $crn, string $vatin)
     {
+        $this->name = $name;
         $this->crn = $crn;
         $this->vatin = $vatin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     /**
@@ -52,6 +66,7 @@ class Company
     public function toArray():array
     {
         return [
+            'name'=>$this->name,
             'crn' => $this->crn,
             'vatin' => $this->vatin,
         ];

@@ -14,6 +14,12 @@ class Address
     /**
      * @var string
      */
+    private $city;
+
+
+    /**
+     * @var string
+     */
     private $zip;
 
 
@@ -29,9 +35,10 @@ class Address
      * @param string $zip
      * @param string $country
      */
-    public function __construct(string $street, string $zip, string $country)
+    public function __construct(string $street, string $city, string $zip, string $country)
     {
         $this->street = $street;
+        $this->city = $city;
         $this->zip = $zip;
         $this->country = $country;
     }
@@ -43,6 +50,7 @@ class Address
     {
         return [
             'street'  => $this->street,
+            'city'    => $this->city,
             'zip'     => $this->zip,
             'country' => $this->country,
         ];
@@ -54,6 +62,14 @@ class Address
     public function getStreet(): string
     {
         return $this->street;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCity(): string
+    {
+        return $this->city;
     }
 
     /**

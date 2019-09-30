@@ -26,10 +26,11 @@ class Company
 
     /**
      * Company constructor.
+     * @param string|null $name
      * @param string $crn
      * @param string $vatin
      */
-    public function __construct(string $name = '', string $crn = '', string $vatin = '')
+    public function __construct(?string $name = '', ?string $crn = '', ?string $vatin = '')
     {
         $this->name = $name;
         $this->crn = $crn;

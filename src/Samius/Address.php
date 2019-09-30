@@ -32,10 +32,11 @@ class Address
     /**
      * Address constructor.
      * @param string $street
+     * @param string|null $city
      * @param string $zip
      * @param string $country
      */
-    public function __construct(string $street = '', string $city = '', string $zip = '', string $country = '')
+    public function __construct(?string $street = '', ?string $city = '', ?string $zip = '', ?string $country = '')
     {
         $this->street = $street;
         $this->city = $city;

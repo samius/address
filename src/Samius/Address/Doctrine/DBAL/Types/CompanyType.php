@@ -16,7 +16,7 @@ class CompanyType extends JsonType
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
         $values = parent::convertToPHPValue($value, $platform);
-        return new Address\Company($values['name'], $values['crn'], $values['vatin']);
+        return new Address\Company($values['name']??null, $values['crn']??null, $values['vatin']??null);
     }
 
     /**

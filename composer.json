@@ -1,6 +1,6 @@
 {
     "license": "MIT",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "name": "samius/address",
     "description": "Data holder classes for address",
     "require": {

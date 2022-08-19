@@ -8,11 +8,14 @@ use Samius\Address;
 
 class CompanyType extends JsonType
 {
-    public function getName()
+    public function getName():string
     {
         return 'company';
     }
 
+    /**
+     * @return mixed
+     */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
         $values = parent::convertToPHPValue($value, $platform);
@@ -21,13 +24,14 @@ class CompanyType extends JsonType
 
     /**
      * {@inheritdoc}
+     * @return mixed
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
         return parent::convertToDatabaseValue($value->toArray(), $platform);
     }
 
-    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    public function requiresSQLCommentHint(AbstractPlatform $platform):bool
     {
         return true;
     }
